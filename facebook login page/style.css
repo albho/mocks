@@ -143,12 +143,6 @@ button[type="submit"]:hover {
   text-decoration: underline;
 }
 
-/* extra blue */
-#extraBlue {
-  height: 10vh;
-  background-color: var(--background-color);
-}
-
 /* footer */
 footer {
   padding: 0 15vw;
