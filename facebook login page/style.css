@@ -1,0 +1,185 @@
+:root {
+  --background-color: #f0f2f5;
+  --primary-blue: #1877f2;
+  --btn-green: #42b72a;
+  --font-grey: #8a8d91;
+  --line-grey: #dddfe2;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* top left */
+main {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15vw;
+  position: relative;
+  background-color: var(--background-color);
+}
+
+#left {
+  width: 60%;
+  height: 45vh; /* change this to adjust relative heights - maybe a better way to do this? */
+  position: relative;
+}
+
+#textContainer h1 {
+  font-size: 3.5rem;
+  color: var(--primary-blue);
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+#textContainer h2 {
+  width: 80%;
+  margin: 0.5rem 0 0 0;
+  font-weight: 100;
+  font-size: 1.8rem;
+}
+
+/* top right - form */
+#right {
+  width: 40%;
+}
+
+form {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 5px #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="email"],
+input[type="password"],
+button[type="submit"],
+button {
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  border: 1px solid var(--line-grey);
+  border-radius: 6px;
+  margin: 0 0 0.8rem 0;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background-color: var(--primary-blue);
+  font-size: 1.4rem;
+  padding: 0.7rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+button[type="submit"]:hover {
+  cursor: pointer;
+}
+
+#forgotPassword {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--primary-blue);
+  border-bottom: 1px solid var(--line-grey);
+  text-align: center;
+  padding: 1rem 0 1.2rem;
+  margin: 0 0 1rem;
+}
+
+#forgotPassword:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: fit-content;
+  margin: 0.5rem auto;
+  background-color: var(--btn-green);
+  text-decoration: none;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Create a Page */
+#createpageContainer {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 1.8rem;
+}
+
+#createpageContainer a {
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+}
+
+#createpageContainer a:hover {
+  text-decoration: underline;
+}
+
+/* extra blue */
+#extraBlue {
+  height: 10vh;
+  background-color: var(--background-color);
+}
+
+/* footer */
+footer {
+  padding: 0 15vw;
+  background-color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap; /* for bottom part of footer */
+}
+
+li {
+  list-style-type: none;
+  margin: 0 1rem 0 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--font-grey);
+  font-size: 0.75rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  color: var(--font-grey);
+  font-size: 0.7rem;
+}
+
+#languages {
+  border-bottom: 1px solid var(--line-grey);
+  padding-top: 1.5rem;
+}
+
+#quicklinks {
+  padding-bottom: 0.5rem;
+}
+
+#bottomMark {
+  padding-bottom: 1rem;
+}
