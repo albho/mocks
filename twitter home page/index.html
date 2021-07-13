@@ -5,36 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home / Twitter</title>
 </head>
 <body>
     <header>
         <div id="navbar-left-container">
             <div id="navbar-left_logo">
-                <!-- icon -->
+                <i class="fas fa-dove"></i>
             </div>
             <div id="navbar-left_navbar">
-
+                <div class="navbar-left_link">
+                    <i class="fas fa-home"></i>
+                    <h2>Home</h2>
+                </div>
+                <div class="navbar-left_link">
+                    <i class="fas fa-hashtag"></i>
+                    <h2>Explore</h2>
+                </div>
+                <div class="navbar-left_link">
+                    <i class="fas fa-hashtag"></i>
+                    <h2>Notifications</h2>
+                </div>
+                <div class="navbar-left_link">
+                    <i class="fas fa-hashtag"></i>
+                    <h2>Messages</h2>
+                </div>
+                <div class="navbar-left_link">
+                    <i class="fas fa-hashtag"></i>
+                    <h2>Bookmarks</h2>
+                </div>
+                <div class="navbar-left_link">
+                    <i class="fas fa-hashtag"></i>
+                    <h2>Lists</h2>
+                </div>
+                <div class="navbar-left_link">
+                    <i class="fas fa-hashtag"></i>
+                    <h2>Profile</h2>
+                </div>
+                <div class="navbar-left_link">
+                    <i class="fas fa-hashtag"></i>
+                    <h2>More</h2>
+                </div>
             </div>
             <div id="navbar-left_btn-container">
                 <button class="btn" id="navbar-left_tweet-btn">Tweet</button>
             </div>
             <div id="navbar-left_account-info">
                 <div id="navbar-left_icon-container">
-                    <!-- icon -->
+                    <i class="fas fa-user-circle"></i>
                 </div>
                 <div id="navbar-left_username-container">
 
                 </div>
-                <a href="#"><!-- three dots --></a>
+                <a href="#"><i class="fas fa-ellipsis-h"></i></a>
             </div>
         </div>
         <div id="home-top-container">
             <div id="home-top_home">
                 <h2>Home</h2>
-                <!-- icon -->
+                <i class="far fa-star"></i>
             </div>
             <div id="home-top_searchBar">
+                <i class="fas fa-search"></i> <!-- put inside input field -->
                 <input type="text">
             </div>
         </div>
@@ -43,13 +76,17 @@
         <div id="mainContent-left-container">
             <div id="mainContent-left_status-bar">
                 <div id="icon-container">
-                    <!-- icon -->
+                    <i class="far fa-user-circle"></i>
                 </div>
                 <div id="status-container">
                     <input type="text" id="status" placeholder="What's happening?">
                     <div id="status-icons-container">
                         <div id="status-icons">
-                            <!-- icons -->
+                            <i class="far fa-smile"></i>
+                            <i class="far fa-smile"></i>
+                            <i class="far fa-smile"></i>
+                            <i class="far fa-smile"></i>
+                            <i class="far fa-smile"></i>
                         </div>
                         <button class="btn" id="status-tweet-btn">Tweet</button>
                     </div>
@@ -66,8 +103,8 @@
         <div id="mainContent-right-container">
             <div class="mainContent-right-card" id="mainContent-right_card1-container">
                 <h3>Who to follow</h3>
-                <section>
-                    <div id="card_icon"><!-- icon --></div>
+                <section class="card">
+                    <div class="card_icon"><i class="far fa-user-circle"></i></div> <!-- find a way to make a circular image holder? -->
                     <div class="card_text">
                         <span>Username</span>
                         <span>@Handle</span>
@@ -76,13 +113,23 @@
                         <button>Follow</button>
                     </div>
                 </section>
-                <div>
+                <section class="card">
+                    <div class="card_icon"><i class="far fa-user-circle"></i></div> <!-- find a way to make a circular image holder? -->
+                    <div class="card_text">
+                        <span>Username</span>
+                        <span>@Handle</span>
+                    </div>
+                    <div class="follow-btn-container">
+                        <button>Follow</button>
+                    </div>
+                </section>
+                <div class="showMore-container">
                     <p class="showMore">Show more</p>
                 </div>
             </div>
             <div class="mainContent-right-card" id="mainContent-right_card2-container">
                 <h3>Topics to follow</h3>
-                <section>
+                <section class="card">
                     <div class="card_text">
                         <span>Topic</span>
                         <span>Subheader</span>
@@ -90,9 +137,9 @@
                     <div class="follow-btn-container">
                         <button>Follow</button>
                     </div>
-                    <button class="remove-icon"><!--x-icon--></button>
+                    <button class="remove-icon"><i class="far fa-times-circle"></i></button>
                 </section>
-                <section>
+                <section class="card">
                     <div class="card_text">
                         <span>Topic</span>
                         <span>Subheader</span>
@@ -100,9 +147,9 @@
                     <div class="follow-btn-container">
                         <button>Follow</button>
                     </div>
-                    <button class="remove-icon"><!--x-icon--></button>
+                    <button class="remove-icon"><i class="far fa-times-circle"></i></button>
                 </section>
-                <section>
+                <section class="card">
                     <div class="card_text">
                         <span>Topic</span>
                         <span>Subheader</span>
@@ -110,8 +157,31 @@
                     <div class="follow-btn-container">
                         <button>Follow</button>
                     </div>
-                    <button class="remove-icon"><!--x-icon--></button>
+                    <button class="remove-icon"><i class="far fa-times-circle"></i></button>
                 </section>
+                <section class="card">
+                    <div class="card_text">
+                        <span>Topic</span>
+                        <span>Subheader</span>
+                    </div>
+                    <div class="follow-btn-container">
+                        <button>Follow</button>
+                    </div>
+                    <button class="remove-icon"><i class="far fa-times-circle"></i></button>
+                </section>
+                <section class="card">
+                    <div class="card_text">
+                        <span>Topic</span>
+                        <span>Subheader</span>
+                    </div>
+                    <div class="follow-btn-container">
+                        <button>Follow</button>
+                    </div>
+                    <button class="remove-icon"><i class="far fa-times-circle"></i></button>
+                </section>
+                <div class="showMore-container">
+                    <p class="showMore">Show more</p>
+                </div>
             </div>
         </div>
     </body>
