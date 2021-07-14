@@ -4,9 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home / Twitter</title>
 </head>
 <body>
-    
+    <header>
+        <div id="header-container">
+            <div id="header-container-topsection">
+                <i class="fas fa-dove fa-lg"></i>                
+                <ul id="header-navbar">
+                    <li><a class="navbar-btn" href="test.html"><i class="fas fa-home fa-lg"></i><span class="primaryheader">Home</span></a></li>
+                    <li><a class="navbar-btn" href="test.html"><i class="fas fa-hashtag fa-lg"></i><span class="primaryheader">Explore</span></a></li>
+                    <li><a class="navbar-btn" href="test.html"><i class="fas fa-bell fa-lg"></i><span class="primaryheader">Notifications</span></a></li>
+                    <li><a class="navbar-btn" href="test.html"><i class="fas fa-envelope fa-lg"></i><span class="primaryheader">Messages</span></a></li>
+                    <li><a class="navbar-btn" href="test.html"><i class="fas fa-bookmark fa-lg"></i><span class="primaryheader">Bookmarks</span></a></li>
+                    <li><a class="navbar-btn" href="test.html"><i class="fas fa-list fa-lg"></i><span class="primaryheader">Lists</span></a></li>
+                    <li><a class="navbar-btn" href="test.html"><i class="fas fa-user fa-lg"></i><span class="primaryheader">Profile</span></a></li>
+                    <li><a class="navbar-btn" href="test.html"><i class="fas fa-angle-double-right fa-lg"></i><span class="primaryheader">More</span></a></li>
+                </ul>
+                <button id="header-tweetbtn" class="btn">Tweet</button>
+            </div>
+            <div id="header-container-bottomsection">
+                <div id="account-container" class="btn">
+                    <img src="Aldroid.jpg" alt="user avatar">
+                    <div id="account">
+                        <span id="account-name">Account Name</span>
+                        <a href="test.html" account-handle">@accounthandle</a>
+                    </div>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="main-left-container">
+            <div id="main-left-top-container">
+                <span class="primaryheader">Home</span>
+                <i class="far fa-star"></i>
+            </div>
+            <div id="main-left-middle-container">
+                <div id="middle-left-container">
+                    <img src="Aldroid.jpg" alt="user avatar">
+                </div>
+                <div id="middle-right-container">
+                    <div id="right-top-container">
+                        <input type="text" name="status" placeholder="What's happening?">
+                    </div>
+                    <div id="right-bottom-container">
+                        <div id="bottom-icons-container">
+                            <i class="far fa-image"></i>
+                            <i class="far fa-smile"></i>
+                            <i class="far fa-calendar"></i>
+                        </div>
+                        <button id="status-tweetbtn" class="btn">Tweet</button>
+                    </div>
+                </div>
+            </div>
+            <div id="main-left-bottom-container">
+                <span class="primaryheader">Welcome!</span>
+                <span>This is the best place to see what’s happening in your world. Find some people and topics to follow now.</span>
+                <button id="welcomebtn" class="btn">Let's go!</button>
+            </div>
+        </div>
+        <div id="main-right-container">
+            <div id="main-right-top-container">
+                <form action="#">
+                    <button><i class="fa fa-search icon"></i></button>
+                    <input class="input-field" type="text" placeholder="Search Twitter">
+                </form>
+            </div>
+            <div id="main-right-card1">
+                <div>
+                    <span class="primaryheader">Who to follow</span>
+                </div>
+                <div>
+                    <div id="accountsuggestion-container">
+                        <img src="Aldroid.jpg" alt="user avatar">
+                        <div id="account">
+                            <span id="account-name">Account Name</span>
+                            <a href="test.html" account-handle">@accounthandle</a>
+                        </div>
+                        <button class="btn followbtn">Follow</button>
+                    </div>
+                    <div id="accountsuggestion-container">
+                        <img src="Aldroid.jpg" alt="user avatar">
+                        <div id="account">
+                            <span id="account-name">Account Name</span>
+                            <a href="test.html" account-handle">@accounthandle</a>
+                        </div>
+                        <button class="btn followbtn">Follow</button>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <a href="test.html">Show more</a>
+                    </div>
+                </div>
+            </div>
+            <div id="main-right-card2">
+                <div>
+                    <span class="primaryheader">Topics to follow</span>
+                </div>
+                <div>
+                    <div id="accountsuggestion-container">
+                        <div id="account">
+                            <span id="account-name">Account Name</span>
+                            <a href="test.html" account-handle">@accounthandle</a>
+                        </div>
+                        <button class="btn followbtn">Follow</button>
+                        <button class="btn"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div id="accountsuggestion-container">
+                        <div id="account">
+                            <span id="account-name">Account Name</span>
+                            <a href="test.html" account-handle">@accounthandle</a>
+                        </div>
+                        <button class="btn followbtn">Follow</button>
+                        <button class="btn"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <a href="test.html">Show more</a>
+                    </div>
+                </div>
+            </div>
+            <div id="footercontainer">
+                <a href="test.html" class="secondaryfont">Terms of Service</a>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

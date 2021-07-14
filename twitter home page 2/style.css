@@ -1,0 +1,79 @@
+@import "header.css";
+@import "main-left.css";
+@import "main-right.css";
+@import "footer.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+:root {
+  /* fonts */
+  --default-font-family: "Lato", sans-serif;
+  --header-font-size: 1.25rem; /* 20px */
+  --default-font-size: 0.9375rem; /* 15px */
+  --small-font-size: 0.8125rem; /* 13px */
+
+  /* colors */
+  --primary-color-dark: #0f1419;
+  --primary-color-grey: #536471;
+  --primary-color-blue: #1da1f2;
+
+  --primary-background-color: #fff;
+  --secondary-background-color: #f7f9f9;
+  --border-color: rgb(239, 243, 244);
+
+  /* hover colors*/
+  --hover-dark-grey: #ccc;
+  --hover-light-grey: #dedede;
+  --hover-dark-blue: rgb(10, 142, 223);
+  --hover-light-blue: rgba(29, 160, 242, 0.192);
+}
+
+* {
+  /* aside for box-sizing, not sure if this is the right place to put these settings */
+  box-sizing: border-box;
+  line-height: 1.5;
+  background-color: var(--primary-background-color);
+  font-family: var(--default-font-family);
+  color: var(--primary-color-dark);
+  font-size: var(--default-font-size);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.primaryheader {
+  font-size: var(--header-font-size);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-blue);
+}
+
+.btn {
+  border-radius: 9999px;
+}
+
+.navbar-btn:hover {
+  color: var(--primary-blue);
+  background-color: var(--hover-light-blue);
+  cursor: pointer;
+}
+
+.followbtn {
+  border: 1px solid var(--primary-blue);
+  border-radius: 9999px;
+  color: var(--primary-blue);
+}
+
+.followbtn:hover {
+  background-color: var(--hover-light-blue);
+  cursor: pointer;
+}
+
+img {
+  width: 30px;
+  border-radius: 50%;
+}
