@@ -1,1 +1,5 @@
 /* main: right section - suggestions cards */
+#main-right-container {
+  width: 30%;
+  border-left: 1px solid var(--border-color);
+}

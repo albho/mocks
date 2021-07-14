@@ -1,1 +1,98 @@
 /* header: left section - logo, navbar, account information + top section - sticky header */
+
+header {
+  position: relative;
+  width: 23%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#header-container {
+  position: fixed;
+  padding: 0 0.8rem;
+  height: 100%;
+  min-width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* TOP SECTION */
+#header-container-topsection {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo */
+#dove-container {
+  margin-top: 0.2rem;
+  padding: 0.8rem 1rem;
+  width: fit-content;
+}
+
+.fa-dove:hover {
+  cursor: pointer;
+}
+
+/* Navigation Menu */
+#header-navbar {
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0.2rem 0;
+}
+
+#header-navbar li {
+  padding: 0;
+}
+
+#header-navbar li .navbar-btn {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  width: fit-content;
+}
+
+#header-navbar li:hover {
+  cursor: pointer;
+}
+
+#header-navbar li:hover * {
+  background-color: var(--hover-light-blue);
+  cursor: pointer;
+  color: var(--primary-color-blue);
+  transition-duration: 0.2s;
+}
+
+#header-navbar li .navbar-btn div {
+  width: 1.8rem;
+  text-align: center;
+}
+
+#header-navbar li .navbar-btn .primaryheader {
+  margin-left: 1.2rem;
+}
+
+/* Tweet button */
+#navbar-tweet-btn {
+  width: 90%;
+}
+
+/* BOTTOM SECTION */
+#account-container {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}
+
+#account {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+}
+
+.fa-ellipsis-h {
+  margin: 0 1em 0 auto;
+}

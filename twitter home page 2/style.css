@@ -3,11 +3,9 @@
 @import "main-right.css";
 @import "footer.css";
 
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-
 :root {
   /* fonts */
-  --default-font-family: "Lato", sans-serif;
+  --default-font-family: arial, helvetica, sans-serif;
   --header-font-size: 1.25rem; /* 20px */
   --default-font-size: 0.9375rem; /* 15px */
   --small-font-size: 0.8125rem; /* 13px */
@@ -25,13 +23,14 @@
   --hover-dark-grey: #ccc;
   --hover-light-grey: #dedede;
   --hover-dark-blue: rgb(10, 142, 223);
-  --hover-light-blue: rgba(29, 160, 242, 0.192);
+  --hover-light-blue: rgb(224, 243, 255);
 }
 
+/* STYLING */
+
+/* aside for box-sizing, not sure if this is the right place to put these settings */
 * {
-  /* aside for box-sizing, not sure if this is the right place to put these settings */
   box-sizing: border-box;
-  line-height: 1.5;
   background-color: var(--primary-background-color);
   font-family: var(--default-font-family);
   color: var(--primary-color-dark);
@@ -41,10 +40,21 @@
 body {
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
+#header-navbar i {
+  font-size: 1.5rem;
+}
+
+.active {
+  color: var(--primary-color-blue);
+}
+
+/* basic text styling */
 .primaryheader {
   font-size: var(--header-font-size);
+  font-weight: 600;
 }
 
 a {
@@ -52,28 +62,39 @@ a {
   color: var(--primary-blue);
 }
 
+/* buttons */
 .btn {
+  border: none;
   border-radius: 9999px;
+  padding: 1rem;
 }
 
-.navbar-btn:hover {
-  color: var(--primary-blue);
+.tweet-btn {
+  color: #fff;
+  font-weight: 600;
+  background-color: var(--primary-color-blue);
+}
+
+.tweet-btn:hover {
+  background-color: var(--hover-dark-blue);
+  cursor: pointer;
+}
+
+.follow-btn {
+  border: 2px solid var(--primary-color-blue);
+  color: var(--primary-color-blue);
+  padding: 0.6rem 1rem;
+}
+
+.follow-btn:hover {
   background-color: var(--hover-light-blue);
   cursor: pointer;
 }
 
-.followbtn {
-  border: 1px solid var(--primary-blue);
-  border-radius: 9999px;
-  color: var(--primary-blue);
-}
-
-.followbtn:hover {
-  background-color: var(--hover-light-blue);
-  cursor: pointer;
-}
-
+/* images (account avatar */
 img {
-  width: 30px;
+  width: 3em;
+  height: 3em;
+  border: 1px solid black;
   border-radius: 50%;
 }

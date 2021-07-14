@@ -1,1 +1,36 @@
 /* main: middle section - status update, feed */
+main {
+  display: flex;
+}
+
+#main-left-container {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--border-color);
+}
+
+#main-left-container > * {
+  padding: 1rem;
+}
+
+/* HOME */
+#main-left-top-container {
+  height: 8vh;
+  position: fixed;
+  width: 55%; /* ugly */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 0;
+}
+
+#main-left-middle-container {
+  margin-top: 8vh;
+  border-top: 1px solid var(--border-color);
+}
+
+/* STATUS BAR */
+#main-left-middle-container {
+  border: 1px solid red;
+  display: flex;
+}
