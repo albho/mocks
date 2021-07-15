@@ -2,10 +2,11 @@
 @import "main-left.css";
 @import "main-right.css";
 @import "footer.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
   /* fonts */
-  --default-font-family: arial, helvetica, sans-serif;
+  --default-font-family: "Roboto", sans-serif;
   --header-font-size: 1.25rem; /* 20px */
   --default-font-size: 0.9375rem; /* 15px */
   --small-font-size: 0.8125rem; /* 13px */
