@@ -88,6 +88,7 @@ form * {
 
 .suggestion-container .follow-btn {
   margin-left: auto;
+  color: var(--primary-blue);
 }
 
 .showmore-container {
