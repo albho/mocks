@@ -98,6 +98,10 @@ form * {
   border-bottom-right-radius: 15px;
 }
 
+.showmore-container span {
+  color: var(--primary-blue);
+}
+
 .showmore-container:hover {
   background-color: var(--hover-light-grey);
   transition-duration: 0.5s;
