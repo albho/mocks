@@ -1,12 +1,15 @@
 /* main: middle section - status update, feed */
 main {
   display: flex;
+  width: 80vw;
 }
 
 #main-left-container {
   display: flex;
   flex-direction: column;
   border-left: 1px solid var(--border-color);
+  background-color: var(--secondary-background-color);
+  width: 45vw;
 }
 
 #main-left-container > * {
@@ -16,21 +19,81 @@ main {
 /* HOME */
 #main-left-top-container {
   height: 8vh;
-  position: fixed;
-  width: 55%; /* ugly */
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 0;
-}
-
-#main-left-middle-container {
-  margin-top: 8vh;
-  border-top: 1px solid var(--border-color);
+  position: fixed; /* positioning */
+  width: 45vw;
+  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
 }
 
 /* STATUS BAR */
 #main-left-middle-container {
-  border: 1px solid red;
+  margin-top: 8vh;
+
+  padding: 0.5rem 1rem;
   display: flex;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#status-avatar-container img {
+  width: 3.5em;
+  height: 3.5em;
+}
+#middle-right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#status {
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  width: 100%;
+  border: none;
+  margin: 0.6rem 0 0 0.5rem;
+}
+
+#status:focus {
+  outline: none;
+}
+
+#right-bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+#bottom-icons-container * {
+  font-size: 1.4rem;
+  color: var(--primary-color-blue);
+  margin: 0 0.5rem;
+}
+
+#bottom-icons-container *:hover {
+  cursor: pointer;
+}
+
+/* WELCOME MESSAGE */
+#main-left-bottom-container {
+  border-top: 1px solid var(--border-color);
+  margin-top: 0.6rem;
+  height: 100%;
+}
+
+#main-left-bottom-container > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0.8rem;
+  align-items: center;
+}
+
+#main-left-bottom-container #welcome-msg {
+  margin: 1rem 0 1.2rem;
+  text-align: center;
 }

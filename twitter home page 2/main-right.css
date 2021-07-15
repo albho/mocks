@@ -1,5 +1,38 @@
 /* main: right section - suggestions cards */
 #main-right-container {
-  width: 30%;
   border-left: 1px solid var(--border-color);
+  width: 35vw;
+}
+
+/* SEARCH BAR */
+#main-right-top-container {
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  position: fixed; /* positioning */
+  width: 30vw;
+}
+
+form {
+  background-color: var(--secondary-background-color);
+  padding: 0.8rem;
+  border-radius: 9999px;
+  width: 100%;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form * {
+  border: none;
+  background-color: var(--secondary-background-color);
+}
+
+/* CARDS */
+#main-right-middle-container {
+  margin-top: 8vh;
+  padding: 0.5rem 2rem;
 }
