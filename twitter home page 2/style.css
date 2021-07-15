@@ -74,6 +74,8 @@ a {
   color: #fff;
   font-weight: 600;
   background-color: var(--primary-color-blue);
+  transition-duration: 0.2s;
+  transition-property: background-color;
 }
 
 .tweet-btn:hover {
@@ -85,6 +87,8 @@ a {
   border: 1px solid var(--primary-color-blue);
   color: var(--primary-color-blue);
   padding: 0.6rem 1rem;
+  transition-duration: 0.2s;
+  transition-property: background-color;
 }
 
 .follow-btn:hover {
