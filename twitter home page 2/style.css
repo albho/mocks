@@ -63,6 +63,14 @@ a {
   color: var(--primary-blue);
 }
 
+.font-grey {
+  color: var(--primary-color-grey);
+}
+
+.small-text {
+  font-size: var(--small-font-size);
+}
+
 /* buttons */
 .btn {
   border: none;

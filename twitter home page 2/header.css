@@ -90,6 +90,7 @@ header {
   display: flex;
   flex-direction: column;
   margin-left: 1em;
+  line-height: 1.6;
 }
 
 .fa-ellipsis-h {

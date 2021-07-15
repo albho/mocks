@@ -1,1 +1,15 @@
 /* footer: bottom of main-right - not a true footer in html file due to layout design */
+#footer-container {
+  padding: 0 3rem;
+  width: 30vw;
+  line-height: 1.6;
+}
+
+#footer-container a {
+  font-size: var(--small-font-size);
+  color: var(--primary-color-grey);
+}
+
+#footer-container a:hover {
+  text-decoration: underline;
+}

@@ -35,4 +35,71 @@ form * {
 #main-right-middle-container {
   margin-top: 8vh;
   padding: 0.5rem 2rem;
+  width: 30vw;
+}
+
+.main-right-card {
+  background-color: var(--secondary-background-color);
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.main-right-card * {
+  background-color: transparent;
+}
+
+.main-right-card .primaryheader-container {
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem;
+}
+
+.suggestion-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+.suggestion-container:hover {
+  cursor: pointer;
+}
+
+.suggestion-container .account {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.8rem;
+}
+
+.suggestion-container .account .account-name:hover {
+  text-decoration: underline;
+}
+
+.suggestion-container .account .subheader {
+  color: var(--primary-color-grey);
+}
+
+.suggestion-container .follow-btn {
+  margin-left: auto;
+}
+
+.showmore-container {
+  padding: 1rem;
+  color: var(--primary-color-blue);
+}
+
+.suggestion-container .xbtn {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5em;
+  transition-duration: 0.2s;
+  transition-property: background-color;
+}
+
+.suggestion-container .xbtn:hover {
+  cursor: pointer;
+  background-color: var(--hover-light-blue);
 }

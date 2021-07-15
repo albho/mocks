@@ -32,7 +32,6 @@ main {
 /* STATUS BAR */
 #main-left-middle-container {
   margin-top: 8vh;
-
   padding: 0.5rem 1rem;
   display: flex;
   border-bottom: 1px solid var(--border-color);
@@ -91,6 +90,7 @@ main {
   flex-direction: column;
   margin: 1.5rem 0.8rem;
   align-items: center;
+  line-height: 1.6;
 }
 
 #main-left-bottom-container #welcome-msg {
