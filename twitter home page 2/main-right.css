@@ -1,7 +1,8 @@
 /* main: right section - suggestions cards */
 #main-right-container {
-  border-left: 1px solid var(--border-color);
-  width: 35vw;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
 }
 
 /* SEARCH BAR */
@@ -63,6 +64,8 @@ form * {
 
 .suggestion-container:hover {
   cursor: pointer;
+  background-color: var(--hover-light-grey);
+  transition-duration: 0.5s;
 }
 
 .suggestion-container .account {
@@ -71,12 +74,16 @@ form * {
   padding-left: 0.8rem;
 }
 
+.suggestion-container .account .account-name {
+  color: var(--primary-dark);
+}
+
 .suggestion-container .account .account-name:hover {
   text-decoration: underline;
 }
 
 .suggestion-container .account .subheader {
-  color: var(--primary-color-grey);
+  color: var(--primary-grey);
 }
 
 .suggestion-container .follow-btn {
@@ -85,7 +92,15 @@ form * {
 
 .showmore-container {
   padding: 1rem;
-  color: var(--primary-color-blue);
+  color: var(--primary-blue);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.showmore-container:hover {
+  background-color: var(--hover-light-grey);
+  transition-duration: 0.5s;
+  cursor: pointer;
 }
 
 .suggestion-container .xbtn {
@@ -101,5 +116,23 @@ form * {
 
 .suggestion-container .xbtn:hover {
   cursor: pointer;
+  background-color: var(--hover-dark-grey);
+}
+
+.follow-btn {
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-color-blue);
+  transition-duration: 0.2s;
+  transition-property: background-color;
+}
+
+.follow-btn:hover {
   background-color: var(--hover-light-blue);
+  cursor: pointer;
+}
+
+@media (max-width: 1037px) {
+  #main-right-container {
+    display: none;
+  }
 }

@@ -1,67 +1,61 @@
-/* header: left section - logo, navbar, account information + top section - sticky header */
-
+/* header: left section */
 header {
-  position: relative;
-  width: 20vw;
-  height: 100vh;
+  width: 25vw;
   display: flex;
   justify-content: flex-end;
 }
 
 #header-container {
-  position: fixed;
-  width: 18vw;
-  height: 100%;
+  position: fixed; /* absolute position already set by parent container - setting it as fixed here just fixes it to its current position relative to viewport */
+  width: 20vw; /* prevent overflow when shrinking page */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-right: 1px solid var(--border-color);
 }
 
-/* TOP SECTION */
+/* TOP SECTION (logo, navigation menu, tweet button) */
 #header-container-topsection {
   display: flex;
   flex-direction: column;
 }
 
 /* Logo */
-#dove-container {
-  margin-top: 0.2rem;
-  padding: 0.8rem 1rem;
-  width: fit-content;
+.fa-dove {
+  background-color: transparent;
 }
 
-.fa-dove:hover {
+#dove-container {
+  width: fit-content; /* works w padding bc logo is square. Else - create div container - set height/width */
+  padding: 0.9rem; /* keep this constant for other items */
+  border-radius: 9999px;
+  margin-top: 0.5rem; /* keep this constant for other items */
+  transition-duration: 0.2s;
+  transition-property: background-color;
+}
+
+#dove-container:hover {
   cursor: pointer;
+  background-color: var(--hover-light-blue);
 }
 
 /* Navigation Menu */
 #header-navbar {
-  height: 100%;
   list-style: none;
   padding: 0;
-  margin: 0.2rem 0;
+  margin: 0.5rem 0;
 }
 
-#header-navbar li {
-  padding: 0;
+#header-navbar i {
+  font-size: 1.5rem;
 }
 
 #header-navbar li .navbar-btn {
   display: flex;
-  padding: 1rem;
+  padding: 0.9rem;
   align-items: center;
   width: fit-content;
-}
-
-#header-navbar li:hover {
-  cursor: pointer;
-}
-
-#header-navbar li:hover * {
-  background-color: var(--hover-light-blue);
-  cursor: pointer;
-  color: var(--primary-color-blue);
-  transition-duration: 0.2s;
 }
 
 #header-navbar li .navbar-btn div {
@@ -70,44 +64,98 @@ header {
 }
 
 #header-navbar li .navbar-btn .primaryheader {
-  margin-left: 1.2rem;
+  margin-left: 1.5rem;
+}
+
+#header-navbar li:hover {
+  cursor: pointer;
+}
+
+#header-navbar li:hover * {
+  background-color: var(--hover-light-blue);
+  color: var(--primary-blue);
+  transition-duration: 0.2s;
 }
 
 /* Tweet button */
-#navbar-tweet-btn {
+#header-container-topsection > .tweet-btn {
+  padding: 1rem !important; /* make this button bigger than other tweet buttons */
   width: 90%;
+}
+
+#header-container-topsection > .tweet-btn * {
+  background-color: transparent;
+  color: var(--primary-background-color);
+}
+
+#navbar-tweet-icon {
+  display: none;
 }
 
 /* BOTTOM SECTION */
 #account-container {
-  margin-bottom: 1rem;
+  height: 10vh;
   display: flex;
   align-items: center;
-  height: 10vh;
+  padding: 1rem 0 1rem 1rem;
+  margin: 0 1rem 0.5rem 0;
+  border-radius: 9999px;
+  width: 95%;
+}
+
+#account-container:hover,
+#account-container:hover * {
+  background-color: var(--hover-light-blue);
+  cursor: pointer;
+  transition-duration: 0.2s;
 }
 
 #account {
   display: flex;
   flex-direction: column;
-  margin-left: 1em;
+  align-items: flex-start;
+  margin-left: 0.8em;
   line-height: 1.6;
 }
 
 .fa-ellipsis-h {
-  margin: 0 1em 0 auto;
+  margin: 0 1rem 0 auto;
 }
 
-@media (max-width: 1051px) {
+@media (max-width: 1007px) {
   #header-navbar li .navbar-btn .primaryheader {
     display: none;
   }
 
   #header-container-topsection {
-    border: 1px solid black;
     align-items: center;
+  }
+
+  #header-container-topsection > .tweet-btn {
+    width: fit-content;
+  }
+
+  #navbar-tweet {
+    display: none;
+  }
+
+  #navbar-tweet-icon {
+    display: block;
   }
 
   #account-container #account {
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .fa-ellipsis-h {
+    display: none !important;
+  }
+
+  #account-container {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
   }
 }

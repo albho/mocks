@@ -11,9 +11,9 @@
   --small-font-size: 0.8125rem; /* 13px */
 
   /* colors */
-  --primary-color-dark: #0f1419;
-  --primary-color-grey: #536471;
-  --primary-color-blue: #1da1f2;
+  --primary-dark: #0f1419;
+  --primary-grey: #536471;
+  --primary-blue: #1da1f2;
 
   --primary-background-color: #fff;
   --secondary-background-color: #f7f9f9;
@@ -21,19 +21,17 @@
 
   /* hover colors*/
   --hover-dark-grey: #ccc;
-  --hover-light-grey: #dedede;
+  --hover-light-grey: #ececec;
   --hover-dark-blue: rgb(10, 142, 223);
   --hover-light-blue: rgb(224, 243, 255);
 }
 
 /* STYLING */
-
-/* aside for box-sizing, not sure if this is the right place to put these settings */
 * {
   box-sizing: border-box;
   background-color: var(--primary-background-color);
   font-family: var(--default-font-family);
-  color: var(--primary-color-dark);
+  color: var(--primary-dark);
   font-size: var(--default-font-size);
 }
 
@@ -44,12 +42,8 @@ body {
   justify-content: space-between;
 }
 
-#header-navbar i {
-  font-size: 1.5rem;
-}
-
 .active {
-  color: var(--primary-color-blue);
+  color: var(--primary-blue);
 }
 
 /* basic text styling */
@@ -64,7 +58,7 @@ a {
 }
 
 .font-grey {
-  color: var(--primary-color-grey);
+  color: var(--primary-grey);
 }
 
 .small-text {
@@ -72,41 +66,33 @@ a {
 }
 
 /* buttons */
-.btn {
+button {
   border: none;
+}
+
+.btn {
   border-radius: 9999px;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .tweet-btn {
-  color: #fff;
+  background-color: var(--primary-blue);
+  color: var(--primary-background-color);
   font-weight: 600;
-  background-color: var(--primary-color-blue);
   transition-duration: 0.2s;
   transition-property: background-color;
+  padding: 0.8rem 1rem !important; /* overriding general .btn styling */
 }
 
-.tweet-btn:hover {
+.tweet-btn:hover,
+.tweet-btn:hover * {
   background-color: var(--hover-dark-blue);
-  cursor: pointer;
-}
-
-.follow-btn {
-  border: 1px solid var(--primary-color-blue);
-  color: var(--primary-color-blue);
-  padding: 0.6rem 1rem;
-  transition-duration: 0.2s;
-  transition-property: background-color;
-}
-
-.follow-btn:hover {
-  background-color: var(--hover-light-blue);
   cursor: pointer;
 }
 
 /* images (account avatar */
 img {
-  width: 3em;
+  width: 3em; /* using em so the icon changes sizes depending where it is on the page */
   height: 3em;
   border: 1px solid black;
   border-radius: 50%;

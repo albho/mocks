@@ -12,11 +12,9 @@
     <header>
         <div id="header-container">
             <div id="header-container-topsection">
-                <div id="dove-container">
-                    <div>
-                        <i class="fas fa-dove fa-2x active"></i>   
-                    </div>
-                </div>
+                <button id="dove-container">
+                    <i class="fas fa-dove fa-2x active"></i>   
+                </button>
                 <ul id="header-navbar">
                     <li><a class="navbar-btn btn" href="test.html"><div><i class="fas fa-home fa-2x active"></i></div><span class="primaryheader active">Home</span></a></li>
                     <li><a class="navbar-btn btn" href="test.html"><div><i class="fas fa-hashtag fa-2x"></i></div><span class="primaryheader">Explore</span></a></li>
@@ -27,24 +25,28 @@
                     <li><a class="navbar-btn btn" href="test.html"><div><i class="fas fa-user fa-2x"></i></div><span class="primaryheader">Profile</span></a></li>
                     <li><a class="navbar-btn btn" href="test.html"><div><i class="fas fa-angle-double-right fa-2x"></i></div><span class="primaryheader">More</span></a></li>
                 </ul>
-                <button class="tweet-btn btn" id="navbar-tweet-btn">Tweet</button>
+                <button class="tweet-btn btn">
+                    <span id="navbar-tweet">Tweet</span>
+                    <i class="fas fa-feather-alt fa-2x" id="navbar-tweet-icon"></i>
+                </button>
+                
             </div>
-            <div id="header-container-bottomsection">
-                <div id="account-container">
+            <div>
+                <button href="test.html" id="account-container">
                     <img src="Aldroid.jpg" alt="user avatar">
                     <div id="account">
                         <span id="account-name">Account Name</span>
                         <a href="test.html" account-handle" class="font-grey">@accounthandle</a>
                     </div>
                     <i class="fas fa-ellipsis-h"></i>
-                </div>
+                </button>
             </div>
         </div>
     </header>
     <main>
         <div id="main-left-container">
             <div id="main-left-top-container">
-                <span class="primaryheader">Home</span>
+                <span href="test.html" class="primaryheader">Home</span>
                 <i class="far fa-star active"></i>
             </div>
             <div id="main-left-middle-container">
@@ -104,6 +106,14 @@
                             </div>
                             <button class="follow-btn btn">Follow</button>
                         </div>
+                        <div class="suggestion-container">
+                            <img src="Aldroid.jpg" alt="user avatar">
+                            <div class="account">
+                                <a class="account-name" href="test.html">Account Name</a>
+                                <span class="subheader" href="test.html">@accounthandle</span>
+                            </div>
+                            <button class="follow-btn btn">Follow</button>
+                        </div>
                     </div>
                     <div>
                         <div class="showmore-container">
@@ -116,6 +126,30 @@
                         <span class="primaryheader">Topics to follow</span>
                     </div>
                     <div>
+                        <div class="suggestion-container">
+                            <div class="account">
+                                <a class="account-name" href="test.html">Topic</a>
+                                <span class="subheader" href="test.html">Subheader</span>
+                            </div>
+                            <button class="follow-btn btn">Follow</button>
+                            <button class="xbtn btn"><i class="fas fa-times"></i></button>
+                        </div>
+                        <div class="suggestion-container">
+                            <div class="account">
+                                <a class="account-name" href="test.html">Topic</a>
+                                <span class="subheader" href="test.html">Subheader</span>
+                            </div>
+                            <button class="follow-btn btn">Follow</button>
+                            <button class="xbtn btn"><i class="fas fa-times"></i></button>
+                        </div>
+                        <div class="suggestion-container">
+                            <div class="account">
+                                <a class="account-name" href="test.html">Topic</a>
+                                <span class="subheader" href="test.html">Subheader</span>
+                            </div>
+                            <button class="follow-btn btn">Follow</button>
+                            <button class="xbtn btn"><i class="fas fa-times"></i></button>
+                        </div>
                         <div class="suggestion-container">
                             <div class="account">
                                 <a class="account-name" href="test.html">Topic</a>
