@@ -37,15 +37,22 @@ status.addEventListener('focus', function() {
 // STATUS UPDATE
 var statusTweet = document.querySelector('#status-tweet-btn');
 var welcomeSection = document.querySelector('#welcome-msg-container');
-var statusUpdate = document.querySelector('#status-update');
-
+var statusUpdateContainer = document.querySelector('#status-update-container');
+var statusContent = document.querySelector('#status-update-content');
 
 statusTweet.addEventListener('click', function() {
-    var statusInput = document.querySelector('#status').value;
-    
-    welcomeSection.style.display = 'none';
-    statusUpdate.style.display = 'block';
+    if (status.value != '') {
+        var statusInput = document.querySelector('#status').value;
 
-    statusUpdate.innerHTML = statusInput;
-    status.value = '';
+        welcomeSection.style.display = 'none';
+        statusUpdateContainer.style.display = 'flex';
+
+        statusContent.innerHTML = statusInput;
+        status.value = '';
+
+    } else {
+        welcomeSection.style.display = 'flex';
+        statusUpdateContainer.style.display = 'none';
+    }
+    
 })
