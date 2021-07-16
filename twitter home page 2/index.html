@@ -26,7 +26,7 @@
                     <li><a class="navbar-btn btn" href="test.html"><div><i class="fas fa-angle-double-right fa-2x"></i></div><span class="primaryheader">More</span></a></li>
                 </ul>
                 <button class="tweet-btn btn">
-                    <span id="navbar-tweet">Tweet</span>
+                    <span id="navbar-tweet">Warble</span>
                     <i class="fas fa-feather-alt fa-2x" id="navbar-tweet-icon"></i>
                 </button>
                 
@@ -65,11 +65,11 @@
                     </div>
                     <div id="right-bottom-container">
                         <div id="bottom-icons-container">
-                            <i class="far fa-image"></i>
-                            <i class="far fa-file-word"></i>
-                            <i class="far fa-chart-bar"></i>
-                            <i class="far fa-smile"></i>
-                            <i class="far fa-calendar-alt"></i>
+                            <div><i class="far fa-image"></i></div>
+                            <div><i class="far fa-file-word"></i></div>
+                            <div><i class="far fa-chart-bar"></i></div>
+                            <div><i class="far fa-smile"></i></div>
+                            <div><i class="far fa-calendar-alt"></i></div>
                         </div>
                         <button id="status-tweet-btn" class="tweet-btn btn">Tweet</button>
                     </div>
@@ -90,7 +90,11 @@
                             <div id="status-update-content-userinfo">
                                 <a href="test.html">Albert Ho</a>
                                 <div>@albho_</div>
-                                <i class="status-ellipsis fas fa-ellipsis-h"></i>
+                                <div id="status-update-content-interactive">
+                                    <button id="status-delete-cancel">Cancel</button>
+                                    <button id="status-delete">Delete</button>                              
+                                    <i class="status-ellipsis fas fa-ellipsis-h"></i>
+                                </div>
                             </div>
                             <div id="status-update-content"></div>
                             <div id="status-update-icons">

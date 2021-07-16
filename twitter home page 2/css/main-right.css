@@ -1,11 +1,11 @@
-/* main: right section - suggestions cards */
+/* Right: search & suggestions */
 #main-right-container {
   width: 30vw;
   display: flex;
   flex-direction: column;
 }
 
-/* SEARCH BAR */
+/*** SEARCH BAR ***/
 #main-right-top-container {
   display: flex;
   height: 54px;
@@ -34,7 +34,7 @@ form * {
   background-color: var(--secondary-background-color);
 }
 
-/* CARDS */
+/*** CARDS ***/
 #main-right-middle-container {
   margin-top: 54px;
   padding: 0.5rem 2rem;
@@ -145,6 +145,7 @@ form * {
   transition-property: background-color;
 }
 
+/*** MEDIA QUERIES ***/
 @media (max-width: 1037px) {
   #main-right-container {
     display: none;

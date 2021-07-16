@@ -28,7 +28,7 @@
   --hover-light-blue: rgb(224, 243, 255);
 }
 
-/* STYLING */
+/***** STYLING *****/
 * {
   box-sizing: border-box;
   background-color: var(--primary-background-color);
@@ -48,7 +48,7 @@ body {
   color: var(--primary-blue);
 }
 
-/* basic text styling */
+/* Basic Text Styling */
 .primaryheader {
   font-size: var(--header-font-size);
   font-weight: 600;
@@ -67,7 +67,7 @@ a {
   font-size: var(--small-font-size);
 }
 
-/* buttons */
+/* Buttons */
 button {
   border: none;
 }
@@ -91,7 +91,7 @@ button {
   background-color: var(--hover-dark-blue);
 }
 
-/* images */
+/* Images */
 img {
   width: 3.2rem;
   height: 3.2rem;

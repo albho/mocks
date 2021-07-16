@@ -1,12 +1,12 @@
 // *** CARD MANIPULATION ***
-const followbtn = document.querySelectorAll('.follow-btn');
-const xbtn = document.querySelectorAll('.xbtn');
+const followButton = document.querySelectorAll('.follow-btn');
+const xBtn = document.querySelectorAll('.xbtn');
 const suggestionContainer = document.querySelectorAll('.topics-suggestion-container');
 const showMore = document.querySelector('#topics-showmore-container');
 
 // follow/unfollow
-for (i = 0; i < followbtn.length; ++i) {
-    followbtn[i].addEventListener('click', function() {
+for (i = 0; i < followButton.length; ++i) {
+    followButton[i].addEventListener('click', function() {
         if (this.innerHTML === 'Follow') {
             this.innerHTML = 'Following';
             this.style.color = 'white';
@@ -20,9 +20,9 @@ for (i = 0; i < followbtn.length; ++i) {
 }
 
 // remove/restore suggestions
-for (i = 0; i < xbtn.length; ++i) { 
-    xbtn[i].addEventListener('click', function() { // cannot access each via i anymore - value of i now == length as it has finished iterating to add event listeners
-        this.parentElement.style.display = 'none'; // omg
+for (i = 0; i < xBtn.length; ++i) { 
+    xBtn[i].addEventListener('click', function() {
+        this.parentElement.style.display = 'none';
     })
 }
 
@@ -95,10 +95,37 @@ statusTweet.addEventListener('click', function() {
         statusTweet.disabled = true;
         statusTweet.style.background = 'var(--hover-light-blue)';
         statusTweet.style.cursor = 'default';
+    }
+})
+    
+// delete tweet
+const statusOptions = document.querySelector('.status-ellipsis');
+const deleteTweet = document.querySelector('#status-delete');
+const deleteCancel = document.querySelector('#status-delete-cancel');
 
+statusOptions.addEventListener('click', function() {
+    if (deleteTweet.style.display == '') {
+        deleteTweet.style.display = 'inline';
     } else {
-        welcomeSection.style.display = 'flex';
+        deleteTweet.style.display = '';
+        deleteCancel.style.display = '';
+    }
+})
+
+deleteTweet.addEventListener('click', function() {
+    if (deleteCancel.style.display == '') {
+        deleteCancel.style.display = 'inline';
+
+        deleteCancel.addEventListener('click', function() {
+            deleteTweet.style.display = '';
+            deleteCancel.style.display = '';
+        })
+    } else {
         statusUpdateContainer.style.display = 'none';
     }
 })
 
+status.addEventListener('focus', function() {
+    deleteTweet.style.display = '';
+    deleteCancel.style.display = '';
+})

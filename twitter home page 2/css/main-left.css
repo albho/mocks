@@ -1,4 +1,4 @@
-/* main: middle section - status update, feed */
+/* Middle: status, welcome message */
 main {
   display: flex;
   width: 75vw;
@@ -17,11 +17,11 @@ main {
   padding: 1rem;
 }
 
-/* HOME */
+/*** TOP: FIXED HOME BAR ***/
 #main-left-top-container {
   position: fixed;
   height: 54px;
-  width: 44.9vw; /* making 1px of space for border - clean or ugly? */
+  width: 44.9vw; /* making 1px of space for border */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +32,7 @@ main {
   cursor: pointer;
 }
 
-/* STATUS BAR */
+/*** MIDDLE: STATUS INPUT ***/
 #main-left-middle-container {
   margin-top: 54px;
   flex-shrink: none;
@@ -53,7 +53,7 @@ main {
   width: 100%;
 }
 
-/* status line */
+/* Input */
 #status {
   font-size: 1.4rem;
   padding: 0.5rem;
@@ -66,7 +66,7 @@ main {
   outline: none;
 }
 
-/* status pop-up */
+/* Status Pop-up */
 #status-popup {
   padding: 0.5rem;
   border-bottom: 1px solid var(--border-color);
@@ -95,7 +95,7 @@ main {
   margin-right: 0.5rem;
 }
 
-/* status icons & tweet button */
+/* Icons */
 #right-bottom-container {
   display: flex;
   justify-content: space-between;
@@ -104,17 +104,69 @@ main {
   margin-top: 1rem;
 }
 
-#bottom-icons-container * {
+#bottom-icons-container {
+  display: flex;
+}
+
+#bottom-icons-container > div {
+  padding: 0.8rem;
+  border-radius: 9999px;
+  transition-duration: 0.2s;
+  transition-property: background-color;
+}
+
+#bottom-icons-container i {
   font-size: 1.4rem;
   color: var(--primary-blue);
-  margin: 0 0.5rem;
+  background-color: transparent;
+  height: 1rem;
+  width: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #bottom-icons-container *:hover {
   cursor: pointer;
+  background-color: var(--hover-light-blue);
 }
 
-/* status update */
+/* BOTTOM 1/2: WELCOME MESSAGE */
+#main-left-bottom-container {
+  border-top: 1px solid var(--border-color);
+  margin-top: 0.6rem;
+  height: 100%;
+  padding: 0;
+}
+
+#main-left-bottom-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.6;
+}
+
+#main-left-bottom-container #welcome-msg-container {
+  padding: 3rem;
+}
+
+#main-left-bottom-container #welcome-msg {
+  margin: 1rem 0 1.2rem;
+  text-align: center;
+}
+
+#welcome-msg-container > button:hover {
+  cursor: pointer;
+}
+
+/*** BOTTOM 2/2: STATUS CONTENT ***/
+:root {
+  --status-button-red: rgb(255, 233, 224);
+  --status-button-green: rgb(222, 255, 214);
+  --status-button-red-hover: rgb(255, 213, 204);
+  --status-button-green-hover: rgb(232, 245, 204);
+}
+
 #status-update-section {
   margin: 0;
 }
@@ -143,10 +195,45 @@ main {
   padding-right: 0.2rem;
 }
 
+/* Delete Status */
+#status-update-content-interactive {
+  margin: 0 1rem 0 auto;
+}
+
+#status-delete,
+#status-delete-cancel {
+  display: none;
+  font-size: var(--small-font-size);
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  transition-duration: 0.2s;
+  transition-property: background-color, color;
+}
+
+#status-delete {
+  color: red;
+  background-color: var(--status-button-red);
+}
+
+#status-delete:hover {
+  cursor: pointer;
+  background-color: var(--status-button-red-hover);
+}
+
+#status-delete-cancel {
+  color: var(--primary-grey);
+  background-color: var(--hover-light-grey);
+}
+
+#status-delete-cancel:hover {
+  cursor: pointer;
+  background-color: var(--hover-dark-grey);
+}
+
 .status-ellipsis {
   padding: 0.5rem;
-  border-radius: 50%;
-  margin: 0 1rem 0 auto;
+  border-radius: 9999px;
+
   color: var(--primary-grey);
   transition-duration: 0.2s;
   transition-property: background-color, color;
@@ -162,6 +249,7 @@ main {
   text-decoration: underline;
 }
 
+/* Status Icons */
 #status-update-icons {
   display: flex;
   width: 80%;
@@ -195,43 +283,16 @@ main {
 #status-update-heart-icon-container:hover,
 #status-update-heart-icon-container:hover * {
   color: red !important;
-  background-color: rgb(255, 233, 224) !important;
+  background-color: var(--status-button-red-hover) !important;
 }
 
 #status-update-rt-icon-container:hover,
 #status-update-rt-icon-container:hover * {
   color: green !important;
-  background-color: rgb(222, 255, 214) !important;
+  background-color: var(--status-button-green-hover) !important;
 }
 
-/* WELCOME MESSAGE */
-#main-left-bottom-container {
-  border-top: 1px solid var(--border-color);
-  margin-top: 0.6rem;
-  height: 100%;
-  padding: 0;
-}
-
-#main-left-bottom-container > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1.6;
-}
-
-#main-left-bottom-container #welcome-msg-container {
-  padding: 3rem;
-}
-
-#main-left-bottom-container #welcome-msg {
-  margin: 1rem 0 1.2rem;
-  text-align: center;
-}
-
-#welcome-msg-container > button:hover {
-  cursor: pointer;
-}
-
+/*** MEDIA QUERIES ***/
 @media (max-width: 1037px) {
   #main-left-container {
     width: 100%;
