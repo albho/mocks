@@ -143,6 +143,21 @@ main {
   padding-right: 0.2rem;
 }
 
+.status-ellipsis {
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin: 0 1rem 0 auto;
+  color: var(--primary-grey);
+  transition-duration: 0.2s;
+  transition-property: background-color, color;
+}
+
+.status-ellipsis:hover {
+  color: var(--primary-blue);
+  background-color: var(--hover-light-blue);
+  cursor: pointer;
+}
+
 #status-update-content-userinfo > a:hover {
   text-decoration: underline;
 }
