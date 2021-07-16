@@ -114,6 +114,11 @@ main {
   cursor: pointer;
 }
 
+/* status update */
+#status-update * {
+  display: none;
+}
+
 /* WELCOME MESSAGE */
 #main-left-bottom-container {
   border-top: 1px solid var(--border-color);

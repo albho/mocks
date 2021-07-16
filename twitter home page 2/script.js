@@ -32,3 +32,20 @@ const status = document.querySelector('#status');
 status.addEventListener('focus', function() {
     popUp.style.display = 'block';
   });
+
+
+// STATUS UPDATE
+var statusTweet = document.querySelector('#status-tweet-btn');
+var welcomeSection = document.querySelector('#welcome-msg-container');
+var statusUpdate = document.querySelector('#status-update');
+
+
+statusTweet.addEventListener('click', function() {
+    var statusInput = document.querySelector('#status').value;
+    
+    welcomeSection.style.display = 'none';
+    statusUpdate.style.display = 'block';
+
+    statusUpdate.innerHTML = statusInput;
+    status.value = '';
+})
