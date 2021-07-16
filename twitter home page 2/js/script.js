@@ -1,6 +1,10 @@
-// FOLLOW/UNFOLLOW
+// *** CARD MANIPULATION ***
 const followbtn = document.querySelectorAll('.follow-btn');
+const xbtn = document.querySelectorAll('.xbtn');
+const suggestionContainer = document.querySelectorAll('.topics-suggestion-container');
+const showMore = document.querySelector('#topics-showmore-container');
 
+// follow/unfollow
 for (i = 0; i < followbtn.length; ++i) {
     followbtn[i].addEventListener('click', function() {
         if (this.innerHTML === 'Follow') {
@@ -15,11 +19,7 @@ for (i = 0; i < followbtn.length; ++i) {
     })
 }
 
-// REMOVE TOPIC SUGGESTIONS
-const xbtn = document.querySelectorAll('.xbtn');
-const suggestionContainer = document.querySelectorAll('.topics-suggestion-container');
-const showMore = document.querySelector('#topics-showmore-container');
-
+// remove/restore suggestions
 for (i = 0; i < xbtn.length; ++i) { 
     xbtn[i].addEventListener('click', function() { // cannot access each via i anymore - value of i now == length as it has finished iterating to add event listeners
         this.parentElement.style.display = 'none'; // omg
@@ -32,10 +32,13 @@ showMore.addEventListener('click', function() {
     }
 })
 
-// RESTORE TOPIC SUGGESTIONS (SHOW MORE BUTTON)
+// *** STATUS UPDATE ***
+const statusTweet = document.querySelector('#status-tweet-btn');
+const welcomeSection = document.querySelector('#welcome-msg-container');
+const statusUpdateContainer = document.querySelector('#status-update-container');
+const statusContent = document.querySelector('#status-update-content');
 
-
-// STATUS POP-UP
+// pop-up on click
 const popUp = document.querySelector('#status-popup');
 const status = document.querySelector('#status');
 
@@ -43,13 +46,42 @@ status.addEventListener('focus', function() {
     popUp.style.display = 'block';
   });
 
+// tweet button
+statusTweet.disabled = false;
+statusTweet.style.background = 'var(--hover-light-blue)';
 
-// STATUS UPDATE
-const statusTweet = document.querySelector('#status-tweet-btn');
-const welcomeSection = document.querySelector('#welcome-msg-container');
-const statusUpdateContainer = document.querySelector('#status-update-container');
-const statusContent = document.querySelector('#status-update-content');
+status.addEventListener('keyup', function() {
+    if (status.value != '') {
+        statusTweet.disabled = false;
+        statusTweet.style.background = 'var(--primary-blue)';
 
+        statusTweet.addEventListener('mouseenter', function() {
+            this.style.background = 'var(--hover-dark-blue)';
+            this.style.cursor = 'pointer';
+        })
+
+        statusTweet.addEventListener('mouseleave', function() {
+            this.style.background = 'var(--primary-blue)';
+        })
+
+    } else {
+        statusTweet.disabled = false;
+        statusTweet.style.background = 'var(--hover-light-blue)';
+        
+        statusTweet.addEventListener('mouseenter', function() {
+            this.style.background = 'var(--hover-light-blue)';
+            this.style.cursor = 'default';
+        })
+
+        statusTweet.addEventListener('mouseleave', function() {
+            this.style.background = 'var(--hover-light-blue)';
+            this.style.cursor = 'default';
+        })
+
+    }
+})
+
+// tweet content
 statusTweet.addEventListener('click', function() {
     if (status.value != '') {
         const statusInput = document.querySelector('#status').value;
@@ -59,6 +91,10 @@ statusTweet.addEventListener('click', function() {
 
         statusContent.innerHTML = statusInput;
         status.value = '';
+
+        statusTweet.disabled = true;
+        statusTweet.style.background = 'var(--hover-light-blue)';
+        statusTweet.style.cursor = 'default';
 
     } else {
         welcomeSection.style.display = 'flex';

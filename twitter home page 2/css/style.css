@@ -89,7 +89,6 @@ button {
 .tweet-btn:hover,
 .tweet-btn:hover * {
   background-color: var(--hover-dark-blue);
-  cursor: pointer;
 }
 
 /* images */

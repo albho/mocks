@@ -83,6 +83,10 @@ header {
   width: 90%;
 }
 
+#header-container-topsection > .tweet-btn:hover {
+  cursor: pointer;
+}
+
 #header-container-topsection > .tweet-btn * {
   background-color: transparent;
   color: var(--primary-background-color);

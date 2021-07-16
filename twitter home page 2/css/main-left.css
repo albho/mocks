@@ -95,7 +95,7 @@ main {
   margin-right: 0.5rem;
 }
 
-/* bottom */
+/* status icons & tweet button */
 #right-bottom-container {
   display: flex;
   justify-content: space-between;
@@ -226,6 +226,10 @@ main {
 #main-left-bottom-container #welcome-msg {
   margin: 1rem 0 1.2rem;
   text-align: center;
+}
+
+#welcome-msg-container > button:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 1037px) {
