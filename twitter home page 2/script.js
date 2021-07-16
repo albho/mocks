@@ -18,12 +18,22 @@ for (i = 0; i < followbtn.length; ++i) {
 // REMOVE TOPIC SUGGESTIONS
 const xbtn = document.querySelectorAll('.xbtn');
 const suggestionContainer = document.querySelectorAll('.topics-suggestion-container');
+const showMore = document.querySelector('#topics-showmore-container');
 
 for (i = 0; i < xbtn.length; ++i) { 
     xbtn[i].addEventListener('click', function() { // cannot access each via i anymore - value of i now == length as it has finished iterating to add event listeners
         this.parentElement.style.display = 'none'; // omg
     })
 }
+
+showMore.addEventListener('click', function() {
+    for (i = 0; i < suggestionContainer.length; ++i) {
+        suggestionContainer[i].style.display = 'flex';
+    }
+})
+
+// RESTORE TOPIC SUGGESTIONS (SHOW MORE BUTTON)
+
 
 // STATUS POP-UP
 const popUp = document.querySelector('#status-popup');
@@ -35,14 +45,14 @@ status.addEventListener('focus', function() {
 
 
 // STATUS UPDATE
-var statusTweet = document.querySelector('#status-tweet-btn');
-var welcomeSection = document.querySelector('#welcome-msg-container');
-var statusUpdateContainer = document.querySelector('#status-update-container');
-var statusContent = document.querySelector('#status-update-content');
+const statusTweet = document.querySelector('#status-tweet-btn');
+const welcomeSection = document.querySelector('#welcome-msg-container');
+const statusUpdateContainer = document.querySelector('#status-update-container');
+const statusContent = document.querySelector('#status-update-content');
 
 statusTweet.addEventListener('click', function() {
     if (status.value != '') {
-        var statusInput = document.querySelector('#status').value;
+        const statusInput = document.querySelector('#status').value;
 
         welcomeSection.style.display = 'none';
         statusUpdateContainer.style.display = 'flex';
@@ -54,5 +64,5 @@ statusTweet.addEventListener('click', function() {
         welcomeSection.style.display = 'flex';
         statusUpdateContainer.style.display = 'none';
     }
-    
 })
+
