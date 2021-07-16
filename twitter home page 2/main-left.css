@@ -183,6 +183,12 @@ main {
   background-color: rgb(255, 233, 224) !important;
 }
 
+#status-update-rt-icon-container:hover,
+#status-update-rt-icon-container:hover * {
+  color: green !important;
+  background-color: rgb(222, 255, 214) !important;
+}
+
 /* WELCOME MESSAGE */
 #main-left-bottom-container {
   border-top: 1px solid var(--border-color);
