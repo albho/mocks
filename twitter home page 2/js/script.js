@@ -28,7 +28,7 @@ for (i = 0; i < xBtn.length; ++i) {
 
 showMore.addEventListener('click', function() {
     for (i = 0; i < suggestionContainer.length; ++i) {
-        suggestionContainer[i].style.display = 'flex';
+        suggestionContainer[i].style.display = 'flex';        
     }
 })
 
