@@ -19,12 +19,12 @@ main {
 
 /* HOME */
 #main-left-top-container {
-  height: 8vh;
+  position: fixed;
+  height: 54px;
   width: 44.9vw; /* making 1px of space for border - clean or ugly? */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -34,15 +34,16 @@ main {
 
 /* STATUS BAR */
 #main-left-middle-container {
-  margin-top: 8vh;
+  margin-top: 54px;
+  flex-shrink: none;
   padding: 0.5rem 1rem;
   display: flex;
   border-bottom: 1px solid var(--border-color);
 }
 
 #status-avatar-container img {
-  width: 3.5em;
-  height: 3.5em;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 #middle-right-container {
@@ -52,6 +53,7 @@ main {
   width: 100%;
 }
 
+/* status line */
 #status {
   font-size: 1.4rem;
   padding: 0.5rem;
@@ -64,6 +66,36 @@ main {
   outline: none;
 }
 
+/* status pop-up */
+#status-popup {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  display: none;
+}
+
+#status-popup > button {
+  display: flex;
+  align-items: center;
+}
+
+#status-popup > button:hover {
+  background-color: var(--hover-light-blue);
+  cursor: pointer;
+  transition-duration: 0.2s;
+  transition-property: background-color;
+}
+
+#status-popup > button * {
+  color: var(--primary-blue);
+  font-weight: 600;
+  background-color: transparent;
+}
+
+#status-popup > button > i {
+  margin-right: 0.5rem;
+}
+
+/* bottom */
 #right-bottom-container {
   display: flex;
   justify-content: space-between;
@@ -92,7 +124,7 @@ main {
 #main-left-bottom-container > div {
   display: flex;
   flex-direction: column;
-  margin: 1.5rem 0.8rem;
+  margin: 1.5rem 0;
   align-items: center;
   line-height: 1.6;
 }
