@@ -1,3 +1,4 @@
+// *** SEARCH ***
 const searchInput = document.querySelector('#input-search');
 const searchPopUp = document.querySelector('#search-popup');
 const searchForm = document.querySelector('#search-bar');
@@ -21,7 +22,6 @@ searchInput.addEventListener('focus', function() {
     })
     
 })
-
 
 // *** CARD MANIPULATION ***
 const followButton = document.querySelectorAll('.follow-btn');
