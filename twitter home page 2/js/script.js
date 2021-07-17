@@ -1,10 +1,35 @@
+const searchInput = document.querySelector('#input-search');
+const searchPopUp = document.querySelector('#search-popup');
+const searchForm = document.querySelector('#search-bar');
+const searchIcon = document.querySelector('.fa-search');
+const searchCancel = document.querySelector('#input-cancel-button');
+
+searchInput.addEventListener('focus', function() {
+    searchForm.style.background = 'var(--primary-background-color)';
+    searchForm.style.border = '1px solid var(--primary-blue)';
+    searchIcon.style.color = 'var(--primary-blue)';
+    searchPopUp.style.display = 'block';
+
+    searchCancel.style.display = 'block';
+    searchCancel.addEventListener('click', function() {
+        searchForm.style.background = 'var(--secondary-background-color)';
+        searchForm.style.border = 'none';
+        searchIcon.style.color = 'black';
+        searchPopUp.style.display = 'none';
+        this.style.display = 'none';
+        searchInput.value = '';
+    })
+    
+})
+
+
 // *** CARD MANIPULATION ***
 const followButton = document.querySelectorAll('.follow-btn');
 const xBtn = document.querySelectorAll('.xbtn');
 const suggestionContainer = document.querySelectorAll('.topics-suggestion-container');
 const showMore = document.querySelector('#topics-showmore-container')
 
-// Follow/Unfollow
+// Follow/Unfollow - possibly improve this with return statement?
 for (i = 0; i < followButton.length; ++i) {
     followButton[i].addEventListener('click', function() {
         if (this.innerHTML === 'Follow') {

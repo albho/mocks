@@ -32,7 +32,7 @@ header {
   padding: 0.9rem; /* keep this constant for other items */
   border-radius: 9999px;
   margin-top: 0.5rem; /* keep this constant for other items */
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   transition-property: background-color;
 }
 
@@ -76,7 +76,7 @@ header {
 #header-navbar li:hover * {
   background-color: var(--hover-light-blue);
   color: var(--primary-blue);
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 
 /* Tweet Button */
@@ -113,7 +113,7 @@ header {
 #account-container:hover * {
   background-color: var(--hover-light-blue);
   cursor: pointer;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 
 #account {
