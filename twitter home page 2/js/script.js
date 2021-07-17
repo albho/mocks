@@ -4,27 +4,32 @@ const xBtn = document.querySelectorAll('.xbtn');
 const suggestionContainer = document.querySelectorAll('.topics-suggestion-container');
 const showMore = document.querySelector('#topics-showmore-container')
 
-// follow/unfollow
+// Follow/Unfollow
 for (i = 0; i < followButton.length; ++i) {
     followButton[i].addEventListener('click', function() {
         if (this.innerHTML === 'Follow') {
             this.innerHTML = 'Following';
+            
             this.addEventListener('mouseleave', function() {
                 if (this.innerHTML === 'Following') {
                     this.style.color = 'white';
                     this.style.background = 'var(--primary-blue)';
+                    this.style.border = '1px solid var(--primary-blue)';
                 }
             })
+
             this.addEventListener('mouseenter', function() {
                 if (this.innerHTML === 'Following') {
-                this.style.background = 'red';
-                this.style.border = 'none';
+                this.style.background = 'rgb(202, 32, 85)';
+                this.style.border = '1px solid rgb(202, 32, 85)';
                 this.innerHTML = 'Unfollow';
                 }
+
                 this.addEventListener('mouseleave', function() {
                     if (this.innerHTML === 'Unfollow') {
                     this.style.color = 'white';
                     this.style.background = 'var(--primary-blue)';
+                    this.style.border = '1px solid var(--primary-blue)';
                     this.innerHTML = 'Following';
                     }
                 })
@@ -34,6 +39,7 @@ for (i = 0; i < followButton.length; ++i) {
             this.innerHTML = 'Follow';
             this.style.color = 'white';
             this.style.background = 'var(--primary-blue)';
+            this.style.border = '1px solid var(--primary-blue)';
 
             this.addEventListener('mouseleave', function() {
                 if (this.innerHTML === 'Follow') {
@@ -42,8 +48,8 @@ for (i = 0; i < followButton.length; ++i) {
                     this.style.background = 'transparent';
                     this.style.border = '1px solid var(--primary-blue)';
                 }
-                
             })
+
             this.addEventListener('mouseenter', function() {
                 if (this.innerHTML === 'Follow') {
                     this.style.background = 'var(--hover-light-blue)';
@@ -54,8 +60,7 @@ for (i = 0; i < followButton.length; ++i) {
     })
 }
 
-
-// remove/restore suggestions
+// Remove/Restore Suggestions
 for (i = 0; i < xBtn.length; ++i) { 
     xBtn[i].addEventListener('click', function() {
         this.parentElement.style.display = 'none';
@@ -74,7 +79,7 @@ const welcomeSection = document.querySelector('#welcome-msg-container');
 const statusUpdateContainer = document.querySelector('#status-update-container');
 const statusContent = document.querySelector('#status-update-content');
 
-// pop-up on click
+// Pop-up On Click
 const popUp = document.querySelector('#status-popup');
 const status = document.querySelector('#status');
 
@@ -82,7 +87,7 @@ status.addEventListener('focus', function() {
     popUp.style.display = 'block';
   });
 
-// tweet button
+// Tweet Button
 statusTweet.disabled = false;
 statusTweet.style.background = 'var(--hover-light-blue)';
 
@@ -117,7 +122,7 @@ status.addEventListener('keyup', function() {
     }
 })
 
-// tweet content
+// Tweet Content
 statusTweet.addEventListener('click', function() {
     if (status.value != '') {
         const statusInput = document.querySelector('#status').value;
@@ -134,7 +139,7 @@ statusTweet.addEventListener('click', function() {
     }
 })
     
-// delete tweet
+// Delete Tweet
 const statusOptions = document.querySelector('.status-ellipsis');
 const deleteTweet = document.querySelector('#status-delete');
 const deleteCancel = document.querySelector('#status-delete-cancel');

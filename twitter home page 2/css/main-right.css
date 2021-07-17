@@ -62,13 +62,13 @@ form * {
   border-bottom: 1px solid var(--border-color);
   padding: 1rem;
   line-height: 1.6;
+  transition-duration: 0.5s;
+  transition-property: background-color;
 }
 
 .suggestion-container:hover {
   cursor: pointer;
   background-color: var(--hover-light-grey);
-  transition-duration: 0.5s;
-  transition-property: background-color;
 }
 
 .suggestion-container .account {
@@ -99,6 +99,9 @@ form * {
   color: var(--primary-blue);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  transition-duration: 0.5s;
+  transition-property: background-color;
+  cursor: pointer;
 }
 
 .showmore-container span {
@@ -108,8 +111,6 @@ form * {
 .showmore-container:hover {
   background-color: var(--hover-light-grey);
   transition-duration: 0.5s;
-  transition-property: background-color;
-  cursor: pointer;
 }
 
 .suggestion-container .account .account-name {
@@ -123,26 +124,29 @@ form * {
   justify-content: center;
   align-items: center;
   margin-left: 0.5em;
+  transition-duration: 0.5s;
+  transition-property: background-color;
 }
 
 .suggestion-container .xbtn:hover {
   cursor: pointer;
   background-color: var(--hover-dark-grey);
-  transition-duration: 0.5s;
-  transition-property: background-color;
 }
 
 .follow-btn {
   border: 1px solid var(--primary-blue);
   color: var(--primary-color-blue);
   font-weight: 600;
+  max-width: 6.3rem; /* quick hack to make button not change size when changing between following & unfollow - js */
+  display: flex;
+  justify-content: center;
+  transition-duration: 0.5s;
+  transition-property: background-color, border;
 }
 
 .follow-btn:hover {
   background-color: var(--hover-light-blue);
   cursor: pointer;
-  transition-duration: 0.2s;
-  transition-property: background-color;
 }
 
 /*** MEDIA QUERIES ***/

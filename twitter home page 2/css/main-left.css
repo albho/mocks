@@ -76,13 +76,13 @@ main {
 #status-popup > button {
   display: flex;
   align-items: center;
+  transition-duration: 0.5s;
+  transition-property: background-color;
 }
 
 #status-popup > button:hover {
   background-color: var(--hover-light-blue);
   cursor: pointer;
-  transition-duration: 0.2s;
-  transition-property: background-color;
 }
 
 #status-popup > button * {
@@ -111,7 +111,7 @@ main {
 #bottom-icons-container > div {
   padding: 0.8rem;
   border-radius: 9999px;
-  transition-duration: 0.2s;
+  transition-duration: 0.5s;
   transition-property: background-color;
 }
 
@@ -206,7 +206,7 @@ main {
   font-size: var(--small-font-size);
   padding: 0.2rem 0.5rem;
   border-radius: 9999px;
-  transition-duration: 0.2s;
+  transition-duration: 0.5s;
   transition-property: background-color, color;
 }
 
@@ -235,7 +235,7 @@ main {
   border-radius: 9999px;
 
   color: var(--primary-grey);
-  transition-duration: 0.2s;
+  transition-duration: 0.5s;
   transition-property: background-color, color;
 }
 
@@ -263,6 +263,12 @@ main {
   display: flex;
 }
 
+#status-update-icons div,
+#status-update-icons > div * {
+  transition-duration: 0.5s;
+  transition-property: background-color, color;
+}
+
 #status-update-icons i {
   height: 1rem;
   width: 1rem;
@@ -275,9 +281,8 @@ main {
 #status-update-icons div:hover,
 #status-update-icons div:hover * {
   color: var(--primary-blue);
-  background-color: var(--hover-light-blue);
   cursor: pointer;
-  transition-duration: 0.2s;
+  background-color: var(--hover-light-blue);
 }
 
 #status-update-heart-icon-container:hover,
