@@ -2,22 +2,58 @@
 const followButton = document.querySelectorAll('.follow-btn');
 const xBtn = document.querySelectorAll('.xbtn');
 const suggestionContainer = document.querySelectorAll('.topics-suggestion-container');
-const showMore = document.querySelector('#topics-showmore-container');
+const showMore = document.querySelector('#topics-showmore-container')
 
 // follow/unfollow
 for (i = 0; i < followButton.length; ++i) {
     followButton[i].addEventListener('click', function() {
         if (this.innerHTML === 'Follow') {
             this.innerHTML = 'Following';
-            this.style.color = 'white';
-            this.style.background = 'var(--primary-blue)';
+            this.addEventListener('mouseleave', function() {
+                if (this.innerHTML === 'Following') {
+                    this.style.color = 'white';
+                    this.style.background = 'var(--primary-blue)';
+                }
+            })
+            this.addEventListener('mouseenter', function() {
+                if (this.innerHTML === 'Following') {
+                this.style.background = 'red';
+                this.style.border = 'none';
+                this.innerHTML = 'Unfollow';
+                }
+                this.addEventListener('mouseleave', function() {
+                    if (this.innerHTML === 'Unfollow') {
+                    this.style.color = 'white';
+                    this.style.background = 'var(--primary-blue)';
+                    this.innerHTML = 'Following';
+                    }
+                })
+            })
+            
         } else {
             this.innerHTML = 'Follow';
-            this.style.color = 'var(--primary-blue)';
-            this.style.background = 'transparent';
-        }    
+            this.style.color = 'white';
+            this.style.background = 'var(--primary-blue)';
+
+            this.addEventListener('mouseleave', function() {
+                if (this.innerHTML === 'Follow') {
+                    this.innerHTML = 'Follow';
+                    this.style.color = 'var(--primary-blue)';
+                    this.style.background = 'transparent';
+                    this.style.border = '1px solid var(--primary-blue)';
+                }
+                
+            })
+            this.addEventListener('mouseenter', function() {
+                if (this.innerHTML === 'Follow') {
+                    this.style.background = 'var(--hover-light-blue)';
+                }
+                
+            })
+        }
     })
 }
+
 
 // remove/restore suggestions
 for (i = 0; i < xBtn.length; ++i) { 
