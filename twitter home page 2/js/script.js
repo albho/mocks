@@ -20,7 +20,6 @@ searchInput.addEventListener('focus', function() {
         this.style.display = 'none';
         searchInput.value = '';
     })
-    
 })
 
 // *** CARD MANIPULATION ***
@@ -143,7 +142,6 @@ status.addEventListener('keyup', function() {
             this.style.background = 'var(--hover-light-blue)';
             this.style.cursor = 'default';
         })
-
     }
 })
 
