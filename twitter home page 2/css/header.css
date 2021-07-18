@@ -23,11 +23,6 @@ header {
 }
 
 /* Logo */
-.fa-dove {
-  color: var(--primary-blue) !important;
-  background-color: transparent;
-}
-
 #dove-container {
   width: fit-content; /* works w padding bc logo is square. Else - create div container - set height/width */
   padding: 0.9rem; /* keep this constant for other items */
@@ -37,14 +32,20 @@ header {
   transition-property: background-color;
 }
 
-#dove-container * {
-  color: #5d001e;
-  background-color: transparent;
-}
-
 #dove-container:hover {
   cursor: pointer;
   background-color: var(--hover-light-blue);
+}
+
+.fa-dove {
+  color: var(--primary-blue) !important;
+  background-color: transparent;
+}
+
+#dove-container i:nth-child(2) {
+  display: none;
+  background-color: transparent;
+  color: #5d001e;
 }
 
 /* Navigation Menu */

@@ -38,6 +38,16 @@ main {
   display: none;
 }
 
+#easter-egg-msg {
+  margin-left: auto;
+  margin-right: 1rem;
+  display: none;
+}
+
+#easter-egg-msg:hover {
+  font-weight: bolder;
+}
+
 /*** MIDDLE: STATUS INPUT ***/
 #main-left-middle-container {
   padding: 0.5rem 1rem;
@@ -197,6 +207,10 @@ main {
   color: var(--primary-dark);
   font-weight: 600;
   padding-right: 0.2rem;
+}
+
+#status-time {
+  margin-left: 0.5rem;
 }
 
 /* Delete Status */

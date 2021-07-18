@@ -102,6 +102,7 @@ const statusTweet = document.querySelector('#status-tweet-btn');
 const welcomeSection = document.querySelector('#welcome-msg-container');
 const statusUpdateContainer = document.querySelector('#status-update-container');
 const statusContent = document.querySelector('#status-update-content');
+const statusTime = document.querySelector('#status-time');
 
 // Pop-up On Click
 const popUp = document.querySelector('#status-popup');
@@ -159,9 +160,15 @@ statusTweet.addEventListener('click', function() {
         statusTweet.disabled = true;
         statusTweet.style.background = 'var(--hover-light-blue)';
         statusTweet.style.cursor = 'default';
+
+        // time stamp
+        var today = new Date();
+        var time = today.getHours() + ':' + today.getMinutes();
+        statusTime.innerText = '· ' + time;
+        statusTime.style.color = 'var(--primary-grey)';
     }
 })
-    
+
 // Delete Tweet
 const statusOptions = document.querySelector('.status-ellipsis');
 const deleteTweet = document.querySelector('#status-delete');
@@ -198,6 +205,9 @@ status.addEventListener('focus', function() {
 const easterEgg1 = document.querySelector('#easter-egg-colorchange1');
 const easterEgg2 = document.querySelector('#easter-egg-colorchange2');
 const logoBird = document.querySelector('.fa-dove');
+const easterEgg = document.querySelector('.fa-egg');
+const easterEggMsg = document.querySelector('#easter-egg-msg');
+const easterEggContainer = document.querySelector('#dove-container');
 
 const root = document.querySelector(':root');
 
@@ -205,7 +215,12 @@ easterEgg1.addEventListener('click', function() {
     if (easterEgg1.style.display != 'none') {
         this.style.display = 'none';
         easterEgg2.style.display = 'block';
-        logoBird.innerHTML = '<i class="fas fa-egg"></i>';
+        easterEggMsg.style.display = 'block';
+        easterEgg.style.display = 'inline';
+
+        easterEggContainer.addEventListener('click', function() {
+            alert('you found the egg!');
+        })
 
         root.style.setProperty('--primary-blue', '#5D001E');
         root.style.setProperty('--hover-dark-blue', '#9A1750');
@@ -219,7 +234,8 @@ easterEgg1.addEventListener('click', function() {
         if (easterEgg2.style.display != 'none') {
             this.style.display = 'none';
             easterEgg1.style.display = 'block';
-            logoBird.innerHTML = '';
+            easterEggMsg.style.display = '';
+            easterEgg.style.display = '';
 
             root.style.setProperty('--primary-blue', '#1da1f2');
             root.style.setProperty('--hover-dark-blue', 'rgb(10, 142, 223)');
