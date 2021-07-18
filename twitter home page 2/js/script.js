@@ -206,7 +206,6 @@ const easterEgg1 = document.querySelector('#easter-egg-colorchange1');
 const easterEgg2 = document.querySelector('#easter-egg-colorchange2');
 const logoBird = document.querySelector('.fa-dove');
 const easterEgg = document.querySelector('.fa-egg');
-const easterEggMsg = document.querySelector('#easter-egg-msg');
 const easterEggContainer = document.querySelector('#dove-container');
 
 const root = document.querySelector(':root');
@@ -215,11 +214,12 @@ easterEgg1.addEventListener('click', function() {
     if (easterEgg1.style.display != 'none') {
         this.style.display = 'none';
         easterEgg2.style.display = 'block';
-        easterEggMsg.style.display = 'block';
         easterEgg.style.display = 'inline';
 
         easterEggContainer.addEventListener('click', function() {
-            alert('you found the egg!');
+            easterEgg.style.display = '';
+
+            status.placeholder = 'Got eggs?';
         })
 
         root.style.setProperty('--primary-blue', '#5D001E');
@@ -234,7 +234,6 @@ easterEgg1.addEventListener('click', function() {
         if (easterEgg2.style.display != 'none') {
             this.style.display = 'none';
             easterEgg1.style.display = 'block';
-            easterEggMsg.style.display = '';
             easterEgg.style.display = '';
 
             root.style.setProperty('--primary-blue', '#1da1f2');
@@ -243,6 +242,8 @@ easterEgg1.addEventListener('click', function() {
             root.style.setProperty('--hover-light-grey', '#ececec');
             root.style.setProperty('--primary-background-color', '#fff');
             root.style.setProperty('--border-color', 'rgb(239, 243, 244)');
+
+            status.placeholder = "What's happening?";
         }
     })
 })
