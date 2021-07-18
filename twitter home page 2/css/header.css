@@ -24,6 +24,7 @@ header {
 
 /* Logo */
 .fa-dove {
+  color: var(--primary-blue) !important;
   background-color: transparent;
 }
 
@@ -34,6 +35,11 @@ header {
   margin-top: 0.5rem; /* keep this constant for other items */
   transition-duration: 0.3s;
   transition-property: background-color;
+}
+
+#dove-container * {
+  color: #5d001e;
+  background-color: transparent;
 }
 
 #dove-container:hover {
@@ -54,8 +60,7 @@ header {
 
 #header-navbar li .navbar-btn {
   display: flex;
-  padding: 0.8rem;
-  padding-right: 1.2rem;
+  padding: 0.8rem 1.2rem 0.8rem 0.8rem;
   align-items: center;
   width: fit-content;
 }
@@ -134,6 +139,10 @@ header {
 
 /* MEDIA QUERIES */
 @media (max-width: 1007px) {
+  #header-navbar li .navbar-btn {
+    padding-right: 0.8rem;
+  }
+
   #header-navbar li .navbar-btn .primaryheader {
     display: none;
   }

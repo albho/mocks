@@ -9,7 +9,7 @@ searchInput.addEventListener('focus', function() {
     searchForm.style.background = 'var(--primary-background-color)';
     searchForm.style.border = '1px solid var(--primary-blue)';
     searchIcon.style.color = 'var(--primary-blue)';
-    searchPopUp.style.display = 'block';
+    searchPopUp.style.display = 'inherit';
 
     searchCancel.style.display = 'block';
     searchCancel.addEventListener('click', function() {
@@ -193,3 +193,42 @@ status.addEventListener('focus', function() {
     deleteTweet.style.display = '';
     deleteCancel.style.display = '';
 })
+
+// easter egg! (change color theme)
+const easterEgg1 = document.querySelector('#easter-egg-colorchange1');
+const easterEgg2 = document.querySelector('#easter-egg-colorchange2');
+const logoBird = document.querySelector('.fa-dove');
+
+const root = document.querySelector(':root');
+
+easterEgg1.addEventListener('click', function() {
+    if (easterEgg1.style.display != 'none') {
+        this.style.display = 'none';
+        easterEgg2.style.display = 'block';
+        logoBird.innerHTML = '<i class="fas fa-egg"></i>';
+
+        root.style.setProperty('--primary-blue', '#5D001E');
+        root.style.setProperty('--hover-dark-blue', '#9A1750');
+        root.style.setProperty('--hover-light-blue', '#EE4C7C');
+        root.style.setProperty('--hover-light-grey', '#EDC7B7');
+        root.style.setProperty('--primary-background-color', '#E3E2DF');
+        root.style.setProperty('--border-color', '#E3AFBC');
+    }
+
+    easterEgg2.addEventListener('click', function() {
+        if (easterEgg2.style.display != 'none') {
+            this.style.display = 'none';
+            easterEgg1.style.display = 'block';
+            logoBird.innerHTML = '';
+
+            root.style.setProperty('--primary-blue', '#1da1f2');
+            root.style.setProperty('--hover-dark-blue', 'rgb(10, 142, 223)');
+            root.style.setProperty('--hover-light-blue', 'rgb(224, 243, 255)');
+            root.style.setProperty('--hover-light-grey', '#ececec');
+            root.style.setProperty('--primary-background-color', '#fff');
+            root.style.setProperty('--border-color', 'rgb(239, 243, 244)');
+        }
+    })
+})
+  
+

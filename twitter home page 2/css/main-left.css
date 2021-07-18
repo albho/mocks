@@ -11,6 +11,7 @@ main {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: var(--primary-background-color);
 }
 
 #main-left-container > * {
@@ -19,8 +20,9 @@ main {
 
 /*** TOP: FIXED HOME BAR ***/
 #main-left-top-container {
-  position: fixed;
-  width: 44.9vw; /* making 1px of space for border */
+  position: sticky;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,10 +33,13 @@ main {
   cursor: pointer;
 }
 
+/* easter egg! */
+#easter-egg-colorchange2 {
+  display: none;
+}
+
 /*** MIDDLE: STATUS INPUT ***/
 #main-left-middle-container {
-  margin-top: 54px;
-  flex-shrink: none;
   padding: 0.5rem 1rem;
   display: flex;
   border-bottom: 1px solid var(--border-color);
@@ -308,11 +313,11 @@ main {
 }
 
 @media (max-width: 640px) {
-  .fa-chart-bar {
-    display: none !important;
+  #bottom-icons-container div:nth-child(3) {
+    display: none;
   }
 
-  .fa-calendar-alt {
-    display: none !important;
+  #bottom-icons-container div:nth-child(5) {
+    display: none;
   }
 }
